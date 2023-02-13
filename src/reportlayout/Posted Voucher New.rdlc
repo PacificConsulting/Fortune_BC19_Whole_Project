@@ -1,0 +1,305 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="VoucherSourceDesc">
+          <DataField>VoucherSourceDesc</DataField>
+        </Field>
+        <Field Name="DocumentNo_GLEntry">
+          <DataField>DocumentNo_GLEntry</DataField>
+        </Field>
+        <Field Name="PostingDateFormatted">
+          <DataField>PostingDateFormatted</DataField>
+        </Field>
+        <Field Name="CompanyInformationAddress">
+          <DataField>CompanyInformationAddress</DataField>
+        </Field>
+        <Field Name="CompanyInformationName">
+          <DataField>CompanyInformationName</DataField>
+        </Field>
+        <Field Name="CreditAmount_GLEntry">
+          <DataField>CreditAmount_GLEntry</DataField>
+        </Field>
+        <Field Name="CreditAmount_GLEntryFormat">
+          <DataField>CreditAmount_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="DebitAmount_GLEntry">
+          <DataField>DebitAmount_GLEntry</DataField>
+        </Field>
+        <Field Name="DebitAmount_GLEntryFormat">
+          <DataField>DebitAmount_GLEntryFormat</DataField>
+        </Field>
+        <Field Name="DrText">
+          <DataField>DrText</DataField>
+        </Field>
+        <Field Name="GLAccName">
+          <DataField>GLAccName</DataField>
+        </Field>
+        <Field Name="CrText">
+          <DataField>CrText</DataField>
+        </Field>
+        <Field Name="DebitAmountTotal">
+          <DataField>DebitAmountTotal</DataField>
+        </Field>
+        <Field Name="DebitAmountTotalFormat">
+          <DataField>DebitAmountTotalFormat</DataField>
+        </Field>
+        <Field Name="CreditAmountTotal">
+          <DataField>CreditAmountTotal</DataField>
+        </Field>
+        <Field Name="CreditAmountTotalFormat">
+          <DataField>CreditAmountTotalFormat</DataField>
+        </Field>
+        <Field Name="ChequeDetail">
+          <DataField>ChequeDetail</DataField>
+        </Field>
+        <Field Name="ChequeNo">
+          <DataField>ChequeNo</DataField>
+        </Field>
+        <Field Name="ChequeDate">
+          <DataField>ChequeDate</DataField>
+        </Field>
+        <Field Name="RsNumberText1NumberText2">
+          <DataField>RsNumberText1NumberText2</DataField>
+        </Field>
+        <Field Name="EntryNo_GLEntry">
+          <DataField>EntryNo_GLEntry</DataField>
+        </Field>
+        <Field Name="PostingDate_GLEntry">
+          <DataField>PostingDate_GLEntry</DataField>
+        </Field>
+        <Field Name="TransactionNo_GLEntry">
+          <DataField>TransactionNo_GLEntry</DataField>
+        </Field>
+        <Field Name="VoucherNoCaption">
+          <DataField>VoucherNoCaption</DataField>
+        </Field>
+        <Field Name="CreditAmountCaption">
+          <DataField>CreditAmountCaption</DataField>
+        </Field>
+        <Field Name="DebitAmountCaption">
+          <DataField>DebitAmountCaption</DataField>
+        </Field>
+        <Field Name="ParticularsCaption">
+          <DataField>ParticularsCaption</DataField>
+        </Field>
+        <Field Name="AmountInWordsCaption">
+          <DataField>AmountInWordsCaption</DataField>
+        </Field>
+        <Field Name="PreparedByCaption">
+          <DataField>PreparedByCaption</DataField>
+        </Field>
+        <Field Name="CheckedByCaption">
+          <DataField>CheckedByCaption</DataField>
+        </Field>
+        <Field Name="ApprovedByCaption">
+          <DataField>ApprovedByCaption</DataField>
+        </Field>
+        <Field Name="GlobalDimension1Code_Branch_GLEntry">
+          <DataField>GlobalDimension1Code_Branch_GLEntry</DataField>
+        </Field>
+        <Field Name="PurchComment">
+          <DataField>PurchComment</DataField>
+        </Field>
+        <Field Name="SrNoCaption">
+          <DataField>SrNoCaption</DataField>
+        </Field>
+        <Field Name="DocNoCaption">
+          <DataField>DocNoCaption</DataField>
+        </Field>
+        <Field Name="InvNoCaption">
+          <DataField>InvNoCaption</DataField>
+        </Field>
+        <Field Name="DateCaption">
+          <DataField>DateCaption</DataField>
+        </Field>
+        <Field Name="InvAmtCaption">
+          <DataField>InvAmtCaption</DataField>
+        </Field>
+        <Field Name="TDSAmtCaption">
+          <DataField>TDSAmtCaption</DataField>
+        </Field>
+        <Field Name="AmountCaption">
+          <DataField>AmountCaption</DataField>
+        </Field>
+        <Field Name="SourceType_GLEntry">
+          <DataField>SourceType_GLEntry</DataField>
+        </Field>
+        <Field Name="SourceNo_GLEntry">
+          <DataField>SourceNo_GLEntry</DataField>
+        </Field>
+        <Field Name="Srno">
+          <DataField>Srno</DataField>
+        </Field>
+        <Field Name="PayDocNo">
+          <DataField>PayDocNo</DataField>
+        </Field>
+        <Field Name="PayInvNo">
+          <DataField>PayInvNo</DataField>
+        </Field>
+        <Field Name="PayDate">
+          <DataField>PayDate</DataField>
+        </Field>
+        <Field Name="PayInvAmt">
+          <DataField>PayInvAmt</DataField>
+        </Field>
+        <Field Name="PayInvAmtFormat">
+          <DataField>PayInvAmtFormat</DataField>
+        </Field>
+        <Field Name="PayTDSAmt">
+          <DataField>PayTDSAmt</DataField>
+        </Field>
+        <Field Name="PayTDSAmtFormat">
+          <DataField>PayTDSAmtFormat</DataField>
+        </Field>
+        <Field Name="PayAmt">
+          <DataField>PayAmt</DataField>
+        </Field>
+        <Field Name="PayAmtFormat">
+          <DataField>PayAmtFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_CustLedgerEntryIN">
+          <DataField>EntryNo_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="PostingDate_CustLedgerEntryIN">
+          <DataField>PostingDate_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="DocumentNo_CustLedgerEntryIN">
+          <DataField>DocumentNo_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_CustLedgerEntryIN">
+          <DataField>Amount_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_CustLedgerEntryINFormat">
+          <DataField>Amount_CustLedgerEntryINFormat</DataField>
+        </Field>
+        <Field Name="AppliestoDocNo_CustLedgerEntryIN">
+          <DataField>AppliestoDocNo_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="TotalTDSTCSInclSHECESS_CustLedgerEntryIN">
+          <DataField>TotalTDSTCSInclSHECESS_CustLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="TotalTDSTCSInclSHECESS_CustLedgerEntryINFormat">
+          <DataField>TotalTDSTCSInclSHECESS_CustLedgerEntryINFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_VendorLedgerEntryIN">
+          <DataField>EntryNo_VendorLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="PostingDate_VendorLedgerEntryIN">
+          <DataField>PostingDate_VendorLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="DocumentNo_VendorLedgerEntryIN">
+          <DataField>DocumentNo_VendorLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_VendorLedgerEntryIN">
+          <DataField>Amount_VendorLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_VendorLedgerEntryINFormat">
+          <DataField>Amount_VendorLedgerEntryINFormat</DataField>
+        </Field>
+        <Field Name="TotalTDSIncludingSHECESS_VendorLedgerEntryIN">
+          <DataField>TotalTDSIncludingSHECESS_VendorLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="TotalTDSIncludingSHECESS_VendorLedgerEntryINFormat">
+          <DataField>TotalTDSIncludingSHECESS_VendorLedgerEntryINFormat</DataField>
+        </Field>
+        <Field Name="EntryNo_BankAccountLedgerEntryIN">
+          <DataField>EntryNo_BankAccountLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="PostingDate_BankAccountLedgerEntryIN">
+          <DataField>PostingDate_BankAccountLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="DocumentNo_BankAccountLedgerEntryIN">
+          <DataField>DocumentNo_BankAccountLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_BankAccountLedgerEntryIN">
+          <DataField>Amount_BankAccountLedgerEntryIN</DataField>
+        </Field>
+        <Field Name="Amount_BankAccountLedgerEntryINFormat">
+          <DataField>Amount_BankAccountLedgerEntryINFormat</DataField>
+        </Field>
+        <Field Name="Narration_LineNarration">
+          <DataField>Narration_LineNarration</DataField>
+        </Field>
+        <Field Name="PrintLineNarration">
+          <DataField>PrintLineNarration</DataField>
+        </Field>
+        <Field Name="IntegerOccurcesCaption">
+          <DataField>IntegerOccurcesCaption</DataField>
+        </Field>
+        <Field Name="Narration_PostedNarration1">
+          <DataField>Narration_PostedNarration1</DataField>
+        </Field>
+        <Field Name="NarrationCaption">
+          <DataField>NarrationCaption</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
